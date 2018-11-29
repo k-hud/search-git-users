@@ -20,10 +20,16 @@ function callAPI(url) {
       'username': 'https://api.github.com',
       'Accept': 'application/vnd.github.v3+json'
     })
-  };
+  }
   console.log(url, options);
   fetch(url)
-  .then(response => response.json())
+  .then( function(response) {
+    if (response.ok) {
+      return response.json();
+    }
+    alert("Looks like I couldnt find a user by that name. Try again.");
+    throw new Error(response.statusText);
+  })
   .then(responseJson => displayResults(responseJson))
   .catch(error => alert("Rugh rough."));
 }

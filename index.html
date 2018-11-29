@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Search Git Hub Users</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>Search GitHub by Username</h1>
+    </header>
+
+    <main>
+      <section class="instructions">This app lets you search GitHub, by username, and returns that user's repositories.</section>
+
+      <section class="input-form">
+
+        <form class="search-form">
+          <input id="user-search-input" type="text" name="username-input" value="">
+          <input type="submit" name="submit" value="Submit">
+        </form>
+      </section>
+
+      <section>
+
+        <div class="repo-results">
+
+        </div>
+
+      </section>
+
+      <div class="error-text"></div>
+
+    </main>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
